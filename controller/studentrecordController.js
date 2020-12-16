@@ -130,7 +130,7 @@ exports.update = (req, res) => {
 //hande delete student record
 exports.delete = function (req, res) {
     let token = verifyToken(req)
-    if (typeof (token) == "object") {
+    if (token == false) {
         res.json({
             status: "error",
             message: token.message
